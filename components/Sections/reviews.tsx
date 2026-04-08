@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const reviews = [
   {
@@ -40,7 +41,7 @@ const reviews = [
   },
 ];
 
-const VISIBLE = 3; // cards visible at once
+const VISIBLE = 3;
 
 export default function Review() {
   const [current, setCurrent] = useState(0);
@@ -56,18 +57,15 @@ export default function Review() {
     <section className="w-full bg-white py-14 md:py-20">
       <div className="mx-auto max-w-7xl px-6">
 
-        {/* ── Header row ── */}
         <div className="mb-10 flex items-center justify-between">
           <h2 className="text-4xl font-extrabold tracking-tight text-[#1e2d3d] md:text-5xl">
             What everyone says
           </h2>
 
-          {/* Arrow buttons */}
           <div className="flex items-center gap-3">
             <button
               onClick={prev}
               disabled={!canPrev}
-              aria-label="Previous"
               className={`flex h-11 w-11 items-center justify-center rounded-full border-2 transition-colors
                 ${canPrev
                   ? "border-orange-400 text-orange-400 hover:bg-orange-50"
@@ -75,15 +73,13 @@ export default function Review() {
                 }`}
             >
               <svg className="h-4 w-4" viewBox="0 0 16 16" fill="none">
-                <path d="M10 3L5 8l5 5" stroke="currentColor" strokeWidth="2"
-                  strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M10 3L5 8l5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
 
             <button
               onClick={next}
               disabled={!canNext}
-              aria-label="Next"
               className={`flex h-11 w-11 items-center justify-center rounded-full border-2 transition-colors
                 ${canNext
                   ? "border-orange-400 text-orange-400 hover:bg-orange-50"
@@ -91,14 +87,12 @@ export default function Review() {
                 }`}
             >
               <svg className="h-4 w-4" viewBox="0 0 16 16" fill="none">
-                <path d="M6 3l5 5-5 5" stroke="currentColor" strokeWidth="2"
-                  strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M6 3l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
           </div>
         </div>
 
-        {/* ── Cards viewport ── */}
         <div className="overflow-hidden">
           <div
             className="flex gap-6 transition-transform duration-500 ease-in-out"
@@ -109,18 +103,20 @@ export default function Review() {
                 key={i}
                 className="flex w-[calc(33.333%-12px)] flex-shrink-0 flex-col justify-between rounded-2xl border border-gray-100 bg-white p-8 shadow-sm"
               >
-                {/* Review text */}
                 <p className="mb-8 text-[15px] leading-relaxed text-gray-600">
                   {review.text}
                 </p>
 
-                {/* Reviewer */}
                 <div className="flex items-center gap-4">
-                  <img
+                  {/* ✅ FIXED HERE */}
+                  <Image
                     src={review.avatar}
                     alt={review.name}
-                    className="h-12 w-12 flex-shrink-0 rounded-full object-cover"
+                    width={48}
+                    height={48}
+                    className="h-12 w-12 rounded-full object-cover"
                   />
+
                   <div>
                     <p className="font-semibold text-[#1e2d3d]">{review.name}</p>
                     <p className="text-sm text-gray-400">{review.role}</p>
@@ -131,7 +127,6 @@ export default function Review() {
           </div>
         </div>
 
-        {/* ── Dot indicators ── */}
         <div className="mt-8 flex justify-center gap-2">
           {Array.from({ length: reviews.length - VISIBLE + 1 }).map((_, i) => (
             <button
@@ -140,7 +135,6 @@ export default function Review() {
               className={`h-2 rounded-full transition-all duration-300 ${
                 i === current ? "w-6 bg-orange-400" : "w-2 bg-gray-200"
               }`}
-              aria-label={`Go to slide ${i + 1}`}
             />
           ))}
         </div>

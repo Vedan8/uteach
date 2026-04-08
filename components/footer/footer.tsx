@@ -11,7 +11,7 @@ type FooterColumn = {
   items: FooterItem[];
 };
 
-const links = [
+const links: FooterColumn[] = [
   {
     heading: "Product",
     items: [
@@ -57,19 +57,11 @@ const links = [
       { label: "Request Demo", arrow: true },
     ],
   },
-] as {
-  heading: string;
-  items: {
-    label: string;
-    badge?: string;
-    arrow?: boolean;
-  }[];
-}[];
+];
 
 export default function Footer() {
   return (
     <footer className="w-full bg-[#0f172a] text-gray-300">
-
       <div className="mx-auto max-w-7xl px-6 py-14 md:py-20">
         <div className="flex flex-col gap-12 md:flex-row md:gap-8">
 
@@ -89,8 +81,9 @@ export default function Footer() {
                 <p className="mb-5 text-sm font-semibold text-white">
                   {col.heading}
                 </p>
+
                 <ul className="space-y-4">
-                  {col.items.map((item) => (
+                  {col.items.map((item: FooterItem) => (
                     <li key={item.label}>
                       <a
                         href="#"
@@ -119,6 +112,7 @@ export default function Footer() {
                     </li>
                   ))}
                 </ul>
+
               </div>
             ))}
           </div>
@@ -164,7 +158,6 @@ export default function Footer() {
           </button>
         </div>
       </div>
-
     </footer>
   );
 }
