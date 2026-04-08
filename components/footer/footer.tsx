@@ -83,7 +83,7 @@ export default function Footer() {
                 </p>
 
                 <ul className="space-y-4">
-                  {col.items.map((item: FooterItem) => (
+                  {col.items.map((item) => (
                     <li key={item.label}>
                       <a
                         href="#"
@@ -91,13 +91,13 @@ export default function Footer() {
                       >
                         {item.label}
 
-                        {item.badge && (
+                        {"badge" in item && item.badge && (
                           <span className="rounded border border-purple-500 px-1.5 py-0.5 text-[10px] font-semibold text-purple-400">
                             {item.badge}
                           </span>
                         )}
 
-                        {item.arrow && (
+                        {"arrow" in item && item.arrow && (
                           <svg className="h-3.5 w-3.5" viewBox="0 0 16 16" fill="none">
                             <path
                               d="M3 8h10M9 4l4 4-4 4"
