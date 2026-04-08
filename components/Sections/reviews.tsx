@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useState } from "react";
@@ -109,7 +108,6 @@ export default function Review() {
                 </p>
 
                 <div className="flex items-center gap-4">
-                  {/* ✅ FIXED HERE */}
                   <Image
                     src={review.avatar}
                     alt={review.name}
