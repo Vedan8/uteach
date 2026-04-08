@@ -11,7 +11,7 @@ type FooterColumn = {
   items: FooterItem[];
 };
 
-const links: FooterColumn[] = [
+const links = [
   {
     heading: "Product",
     items: [
@@ -57,7 +57,14 @@ const links: FooterColumn[] = [
       { label: "Request Demo", arrow: true },
     ],
   },
-];
+] as {
+  heading: string;
+  items: {
+    label: string;
+    badge?: string;
+    arrow?: boolean;
+  }[];
+}[];
 
 export default function Footer() {
   return (
