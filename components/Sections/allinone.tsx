@@ -24,11 +24,11 @@ const plusMarks = [
 
 export default function AllInOneSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-white py-6 md:py-10 lg:py-14">
+    <section className="mx-auto relative w-full overflow-hidden bg-white py-6 md:py-10 lg:py-14 lg:px-10 px-5">
       {/* Removed max-width for extreme left/right stretching. 
         Reduced gaps to half. 
       */}
-      <div className="mx-auto flex w-full flex-col items-center justify-between gap-8 px-4 sm:px-6 md:flex-row md:gap-5 lg:px-10">
+      <div className="mx-auto flex w-full flex-col items-center justify-between gap-8 md:flex-row md:gap-5 lg:px-10">
 
         {/* ════════════════════════════════
             LEFT — text content
@@ -37,24 +37,18 @@ export default function AllInOneSection() {
           {/* Added lg:whitespace-nowrap to force single line on laptops. Margins halved. */}
           <h2 className="mb-3 text-3xl font-extrabold leading-[1.15] tracking-tight text-[#1a2431] sm:text-4xl lg:whitespace-nowrap lg:text-5xl xl:text-[56px]">
             An{" "}
-            <span className="relative inline-block text-[#1a2431]">
-              all-in-one
-              {/* orange underline */}
-              <svg
-                className="absolute -bottom-1 left-0 w-full md:-bottom-2"
-                viewBox="0 0 260 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M2 6 C50 2, 130 2, 258 5"
-                  stroke="#F5A623"
-                  strokeWidth="5"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>{" "}
+            <span className="relative z-0 inline-block text-[#1a2431]">
+  all-in-one
+  <Image
+    src="/vectort.png"
+    alt="Highlight"
+    width={260}
+    height={20}
+    // -z-10 ensures the image sits behind the text
+    // translate-y-[30%] mimics the "underline" positioning from your previous design
+    className="absolute left-0 bottom-0 -z-10 w-full translate-y-[30%]"
+  />
+</span>{" "}
             app that makes it easier
           </h2>
 
@@ -103,54 +97,50 @@ export default function AllInOneSection() {
         {/* ════════════════════════════════
             RIGHT — blob + group image
         ════════════════════════════════ */}
-        <div className="relative flex w-full justify-end md:w-[45%] lg:w-[40%] xl:w-[35%]">
+        <div className="relative flex w-full justify-end md:w-[50%] lg:w-[55%] xl:w-[60%]">
 
-          {/* Scattered yellow dots */}
-          {sparkles.map((s, i) => (
-            <span
-              key={`sparkle-${i}`}
-              className={`pointer-events-none absolute rounded-full bg-[#FFC107] ${s.className}`}
-              style={{
-                width: s.size,
-                height: s.size,
-              }}
-            />
-          ))}
+  {/* Sparkles */}
+  {sparkles.map((s, i) => (
+    <span
+      key={`sparkle-${i}`}
+      className={`pointer-events-none absolute rounded-full bg-[#FFC107] ${s.className}`}
+      style={{ width: s.size, height: s.size }}
+    />
+  ))}
 
-          {/* Plus marks */}
-          {plusMarks.map((p, i) => (
-            <span
-              key={`plus-${i}`}
-              className={`pointer-events-none absolute text-xl font-light leading-none text-[#FFC107] xl:text-2xl ${p.className}`}
-            >
-              +
-            </span>
-          ))}
+  {/* Plus marks */}
+  {plusMarks.map((p, i) => (
+    <span
+      key={`plus-${i}`}
+      className={`pointer-events-none absolute text-xl font-light leading-none text-[#FFC107] xl:text-2xl ${p.className}`}
+    >
+      +
+    </span>
+  ))}
 
-          {/* Orange blob - inset-y-0 forces it to exactly match the image container height */}
-          <div className="pointer-events-none absolute inset-y-0 -left-[20%] z-0 w-[120%] sm:-left-[30%] md:-left-[50%] lg:-left-[60%] lg:w-[150%]">
-            <Image
-              src="/blob.png"
-              alt=""
-              fill
-              className="object-contain object-left md:object-right"
-              priority
-            />
-          </div>
+  {/* Blob */}
+  <div className="pointer-events-none absolute inset-y-0 left-[10%] z-0 w-[120%] h-[80%] md:-left-[60%] lg:-left-[80%] xl:-left-[80%]">
+  <Image
+    src="/blob.png"
+    alt=""
+    fill
+    className="object-contain object-left md:object-right"
+    priority
+  />
+</div>
 
-          {/* Group image (browser + cards) - Stays on the right, text will never overlap this */}
-          {/* <div className="relative z-10 w-[90%] sm:w-[90%] md:w-full lg:max-w-[700px] xl:max-w-[900px]"> */}
-          <div className="relative z-10 w-[90%] sm:w-[90%] md:w-full lg:max-w-[700px] xl:max-w-[900px]">
-            <Image
-              src="/group.png"
-              alt="App preview with course cards"
-              width={1200}
-              height={900}
-              className="h-auto w-full drop-shadow-sm"
-              priority
-            />
-          </div>
-        </div>
+  {/* ✅ MAIN IMAGE FIX */}
+  <div className="relative z-10 w-full mr-[80px]">
+    <Image
+      src="/group.png"
+      alt="App preview with course cards"
+      width={1200}
+      height={900}
+      className="h-auto w-[110%] sm:w-[115%] md:w-full lg:w-[115%] xl:w-[120%] max-w-none drop-shadow-sm"
+      priority
+    />
+  </div>
+</div>
 
       </div>
     </section>

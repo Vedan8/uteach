@@ -2,81 +2,80 @@ import Image from "next/image";
 
 export default function World() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#FFC107] py-16 md:py-0 md:min-h-[480px]">
+    // Increased mobile padding (py-36) and desktop minimum heights (600px / 720px) to make the component taller
+    <section className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-[#FFC107] py-36 md:py-0 min-h-[700px] md:min-h-[1000px] lg:min-h-[900px]">
 
       {/* ════════════════════════════════════════════
           MOBILE layout — top + bottom strips
       ════════════════════════════════════════════ */}
-
-      {/* Top avatars strip — mobile only */}
-      <div className="mb-6 block md:hidden">
+      
+      {/* Top avatars strip */}
+      <div className="absolute left-0 top-0 w-full md:hidden">
         <Image
           src="/top-world.png"
           alt=""
-          width={400}
-          height={160}
-          className="w-full object-contain"
+          width={600}
+          height={240}
+          className="w-full object-cover object-top"
           priority
         />
       </div>
 
-      {/* ════════════════════════════════════════════
-          DESKTOP layout — left / center / right
-      ════════════════════════════════════════════ */}
-      <div className="relative mx-auto flex max-w-7xl items-center justify-between md:min-h-[480px]">
-
-        {/* Left avatars — desktop only */}
-        <div className="hidden md:block md:w-[38%] lg:w-[36%]">
-          <Image
-            src="/left-world.png"
-            alt=""
-            width={520}
-            height={480}
-            className="w-full object-contain"
-            priority
-          />
-        </div>
-
-        {/* ── Center text ── */}
-        <div className="z-10 flex flex-col items-center px-4 text-center md:absolute md:left-1/2 md:-translate-x-1/2 md:w-[420px]">
-          <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-[#1e2d3d] md:text-4xl lg:text-5xl">
-            Join a world of learning
-          </h2>
-          <p className="mb-8 text-sm leading-relaxed text-[#1e2d3d]/80 md:text-base">
-            Malesuada ut aliquam at ac est nisi, interdum etiam dignissim.
-            <br className="hidden md:block" />
-            Risus elit et fringilla habitant ut facilisi.
-          </p>
-          <a
-            href="#"
-            className="rounded-xl bg-[#e8500a] px-10 py-4 text-base font-bold text-white shadow-md hover:bg-[#d44509] transition-colors"
-          >
-            Sign Up Now
-          </a>
-        </div>
-
-        {/* Right avatars — desktop only */}
-        <div className="hidden md:block md:w-[38%] lg:w-[36%]">
-          <Image
-            src="/right-world.png"
-            alt=""
-            width={520}
-            height={480}
-            className="w-full object-contain"
-            priority
-          />
-        </div>
-      </div>
-
-      {/* Bottom avatars strip — mobile only */}
-      <div className="mt-6 block md:hidden">
+      {/* Bottom avatars strip */}
+      <div className="absolute bottom-0 left-0 w-full md:hidden">
         <Image
           src="/bottom-world.png"
           alt=""
-          width={400}
-          height={160}
-          className="w-full object-contain"
+          width={600}
+          height={240}
+          className="w-full object-cover object-bottom"
         />
+      </div>
+
+      {/* ════════════════════════════════════════════
+          DESKTOP layout — left / right strips
+      ════════════════════════════════════════════ */}
+      
+      {/* Left avatars — absolute to left edge */}
+      <div className="absolute left-0 top-1/2 hidden h-full w-[35%] -translate-y-1/2 md:block lg:w-[40%]">
+        <Image
+          src="/left-world.png"
+          alt=""
+          width={600}
+          height={720}
+          className="h-full w-full object-contain object-left"
+          priority
+        />
+      </div>
+
+      {/* Right avatars — absolute to right edge */}
+      <div className="absolute right-0 top-1/2 hidden h-full w-[35%] -translate-y-1/2 md:block lg:w-[40%]">
+        <Image
+          src="/right-world.png"
+          alt=""
+          width={600}
+          height={720}
+          className="h-full w-full object-contain object-right"
+          priority
+        />
+      </div>
+
+      {/* ── Center text ── */}
+      <div className="relative z-10 flex max-w-[540px] flex-col items-center px-6 text-center">
+        <h2 className="mb-5 text-4xl font-extrabold tracking-tight text-[#141517] md:text-5xl lg:text-[3.25rem] lg:leading-tight">
+          Join a world of learning
+        </h2>
+        <p className="mb-10 text-base leading-relaxed text-[#141517]/80 md:text-lg lg:text-xl">
+          Malesuada ut aliquam at ac est nisi, interdum etiam dignissim.
+          <br className="hidden md:block" />
+          Risus elit et fringilla habitant ut facilisi.
+        </p>
+        <a
+          href="#"
+          className="rounded-xl bg-[#ea580c] px-12 py-4 text-base font-bold text-white shadow-md transition-all hover:scale-105 hover:bg-[#c2410c] lg:text-lg"
+        >
+          Sign Up Now
+        </a>
       </div>
 
     </section>

@@ -30,20 +30,22 @@ export default function Tools() {
       <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 lg:px-10 flex flex-col items-center">
 
         {/* HEADING */}
-        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-[64px] font-extrabold text-[#1a2431] leading-tight">
-          All the{" "}
-          <span className="relative inline-block">
-            tools
-            <Image
-              src="/vector.png"
-              alt="Highlight"
-              width={120}
-              height={14}
-              className="absolute left-0 bottom-0 w-full translate-y-[30%] object-contain"
-            />
-          </span>{" "}
-          that you need
-        </h2>
+      <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-[64px] font-extrabold text-[#1a2431] leading-tight">
+  All the{" "}
+  {/* Added z-0 to establish a stacking context */}
+  <span className="relative z-0 inline-block">
+    tools
+    <Image
+      src="/vector.png"
+      alt="Highlight"
+      width={120}
+      height={14}
+      // Added -z-10 to push the image exactly behind the text
+      className="absolute left-0 bottom-0 -z-10 w-full translate-y-[30%] object-contain"
+    />
+  </span>{" "}
+  that you need
+</h2>
 
         {/* SUBTEXT */}
         <p className="mt-6 max-w-[700px] text-center text-sm sm:text-base md:text-lg text-[#6b7280] leading-relaxed">

@@ -2,30 +2,31 @@ import Image from "next/image";
 
 export default function Cool() {
   return (
-    <section className="w-full bg-white py-12 md:py-20">
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-6 md:flex-row md:items-center md:gap-8">
+    // Reduced vertical padding (py-10 md:py-16 lg:py-20) to shrink the height
+    <section className="w-full overflow-hidden bg-white py-10 md:py-16 lg:py-20">
+      <div className="flex w-full flex-col items-center justify-between gap-10 px-6 md:flex-row lg:px-20">
 
         {/* ════════════════════════════════
             LEFT — text content
         ════════════════════════════════ */}
-        <div className="flex-1 max-w-lg">
-          <h2 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight text-[#1e2d3d] md:text-5xl">
+        {/* Increased width to 55% on medium screens and 60% on extra large screens */}
+        <div className="w-full md:w-[55%] xl:w-[60%]">
+          <h2 className="mb-6 text-5xl font-extrabold leading-tight tracking-tight text-[#0F172A] md:text-6xl lg:text-[4.5rem]">
             All the cool{" "}
-            <span className="relative inline-block">
+            <span className="relative z-0 inline-block">
               features
-              <span className="absolute -bottom-1 left-0 w-full">
-                <Image
-                  src="/vector.png"
-                  alt=""
-                  width={200}
-                  height={10}
-                  className="w-full"
-                />
-              </span>
+              <Image
+                src="/vector.png"
+                alt="Highlight underline"
+                width={260}
+                height={20}
+                className="absolute -bottom-2 left-0 -z-10 w-full translate-y-[20%] object-contain lg:-bottom-3 lg:w-[110%]"
+              />
             </span>
           </h2>
 
-          <p className="mb-8 text-base leading-relaxed text-gray-600">
+          {/* Removed max-w-xl so the text spans wider across its new, larger container */}
+          <p className="mb-8 text-lg leading-relaxed text-gray-600 lg:w-[90%] lg:text-xl">
             Mauris consequat, cursus pharetra et, habitasse rhoncus quis odio ac.
             In et dolor eu donec maecenas nulla. Cum sed orci, sit pellentesque
             quisque feugiat cras ullamcorper. Ultrices in amet, ullamcorper non
@@ -34,14 +35,18 @@ export default function Cool() {
 
           <a
             href="#"
-            className="inline-flex items-center gap-2 text-[15px] font-semibold text-blue-600 hover:text-blue-700"
+            className="group inline-flex items-center gap-2 text-base font-semibold text-blue-600 transition-colors hover:text-blue-700 lg:text-lg"
           >
             View all the features
-            <svg className="h-4 w-4" viewBox="0 0 16 16" fill="none">
+            <svg 
+              className="h-5 w-5 transition-transform group-hover:translate-x-1" 
+              viewBox="0 0 16 16" 
+              fill="none"
+            >
               <path
                 d="M3 8h10M9 4l4 4-4 4"
                 stroke="currentColor"
-                strokeWidth="1.8"
+                strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
@@ -52,20 +57,21 @@ export default function Cool() {
         {/* ════════════════════════════════
             RIGHT — composite image
         ════════════════════════════════ */}
-        <div className="relative flex-1 flex justify-center">
+        {/* Takes up the remaining 45% / 40% of the screen space */}
+        <div className="relative mt-10 flex w-full justify-center md:mt-0 md:w-[45%] xl:w-[40%] md:justify-end">
           {/* Yellow sparkle dots */}
-          <span className="pointer-events-none absolute top-4 right-8 text-yellow-400 text-lg font-bold select-none">+</span>
-          <span className="pointer-events-none absolute top-10 right-20 h-2.5 w-2.5 rounded-full bg-yellow-400 select-none" />
-          <span className="pointer-events-none absolute top-16 right-10 h-1.5 w-1.5 rounded-full bg-yellow-400 select-none" />
-          <span className="pointer-events-none absolute bottom-10 right-6 text-yellow-400 text-sm font-bold select-none">×</span>
-          <span className="pointer-events-none absolute bottom-20 right-24 h-2 w-2 rounded-full bg-yellow-400 select-none" />
+          <span className="pointer-events-none absolute right-12 top-4 select-none text-2xl font-bold text-yellow-400 lg:right-24">+</span>
+          <span className="pointer-events-none absolute right-28 top-14 h-3 w-3 select-none rounded-full bg-yellow-400 lg:right-40" />
+          <span className="pointer-events-none absolute right-16 top-24 h-2 w-2 select-none rounded-full bg-yellow-400 lg:right-20" />
+          <span className="pointer-events-none absolute bottom-16 right-10 select-none text-lg font-bold text-yellow-400 lg:right-20">×</span>
+          <span className="pointer-events-none absolute bottom-32 right-32 h-2.5 w-2.5 select-none rounded-full bg-yellow-400 lg:right-48" />
 
           <Image
             src="/Right.png"
             alt="Cool features preview"
-            width={620}
-            height={560}
-            className="w-full max-w-[580px]"
+            width={800}
+            height={720}
+            className="w-full max-w-[550px] object-contain lg:max-w-[700px] xl:max-w-[800px]"
             priority
           />
         </div>
