@@ -2,18 +2,11 @@ import Image from "next/image";
 
 export default function Student() {
   return (
-    <section className="w-full overflow-hidden bg-white py-12 md:py-24">
-      {/* Removed max-w-7xl to utilize complete width. 
-        Added justify-between and adjusted padding to span the edges.
-      */}
+    <section className="w-full overflow-hidden bg-white py-12 md:py-24 font-roboto">
       <div className="flex w-full flex-col-reverse items-center justify-between gap-16 px-6 md:flex-row md:px-12 lg:px-24">
         
-        {/* ════════════════════════════════
-            LEFT — Staggered photo gallery
-        ════════════════════════════════ */}
         <div className="relative flex w-full flex-shrink-0 justify-center items-center gap-3 md:w-1/2 md:justify-start lg:gap-5">
 
-          {/* Column 1 — shifted DOWN */}
           <div className="flex flex-col gap-3 pt-24">
             <Image
               src="/col1.png"
@@ -24,7 +17,6 @@ export default function Student() {
             />
           </div>
 
-          {/* Column 2 — starts at top */}
           <div className="flex flex-col gap-3">
             <Image
               src="/col2.png"
@@ -35,7 +27,6 @@ export default function Student() {
             />
           </div>
 
-          {/* Column 3 — shifted UP */}
           <div className="flex flex-col gap-3 -mt-16 lg:-mt-24">
             <Image
               src="/col3.png"
@@ -46,7 +37,6 @@ export default function Student() {
             />
           </div>
 
-          {/* Column 4 — middle height */}
           <div className="flex flex-col gap-3 pt-12 lg:pt-16">
             <Image
               src="/col4.png"
@@ -58,13 +48,10 @@ export default function Student() {
           </div>
         </div>
 
-        {/* ════════════════════════════════
-            RIGHT — Text content
-        ════════════════════════════════ */}
         <div className="w-full max-w-3xl md:w-1/2">
           
           <h2 className="relative mb-6 text-4xl font-extrabold leading-tight tracking-tight text-[#141517] md:text-5xl lg:text-[3.5rem]">
-            {/* Aeroplane icon positioned absolutely relative to the heading */}
+           
             <span className="absolute -top-8 right-[10%] lg:-top-12 lg:right-[40%]">
               <Image
                 src="/aeroplane.png"

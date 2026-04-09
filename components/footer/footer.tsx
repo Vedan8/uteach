@@ -61,7 +61,7 @@ const links: FooterColumn[] = [
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#0f172a] text-gray-300">
+    <footer className="w-full bg-[#0f172a] text-gray-300 font-roboto">
       <div className="w-full px-6 py-12 md:px-12 md:py-24 lg:px-24">
         <div className="flex flex-col gap-10 md:flex-row md:gap-16 lg:gap-20">
 
@@ -74,8 +74,6 @@ export default function Footer() {
               className="object-contain"
             />
           </div>
-
-          {/* Changed grid-cols-2 to grid-cols-1 for the mobile stack */}
           <div className="grid flex-1 grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-5">
             {links.map((col) => (
               <div key={col.heading}>
@@ -120,21 +118,17 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Full width separator with matching padding */}
       <div className="w-full px-6 md:px-12 lg:px-24">
         <hr className="border-gray-800" />
       </div>
 
-      {/* Changed flex-col items alignment to items-start for mobile */}
       <div className="flex w-full flex-col items-start justify-between gap-6 px-6 py-8 text-[15px] text-gray-400 sm:flex-row sm:items-center md:px-12 md:text-base lg:px-24">
         <p>uteach @ 2023. All rights reserved.</p>
 
-        {/* Adjusted gaps and layout to fit the bottom row on one line as shown in the screenshot */}
         <div className="flex w-full flex-wrap items-center justify-between gap-y-4 sm:w-auto sm:justify-end sm:gap-6 md:gap-8">
           <div className="flex items-center gap-4 sm:gap-6 md:gap-8">
             <a href="#" className="transition-colors hover:text-white">Terms</a>
             <a href="#" className="transition-colors hover:text-white">Privacy</a>
-            {/* Hidden Contact link on mobile to match the exact visual of your screenshot */}
             <a href="#" className="hidden transition-colors hover:text-white sm:block">Contact</a>
           </div>
 

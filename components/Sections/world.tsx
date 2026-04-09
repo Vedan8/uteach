@@ -2,14 +2,8 @@ import Image from "next/image";
 
 export default function World() {
   return (
-    // Increased mobile padding (py-36) and desktop minimum heights (600px / 720px) to make the component taller
-    <section className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-[#FFC107] py-36 md:py-0 min-h-[700px] md:min-h-[1000px] lg:min-h-[900px]">
+    <section className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-[#FFC107] py-36 md:py-0 min-h-[700px] md:min-h-[1000px] lg:min-h-[900px] font-roboto">
 
-      {/* ════════════════════════════════════════════
-          MOBILE layout — top + bottom strips
-      ════════════════════════════════════════════ */}
-      
-      {/* Top avatars strip */}
       <div className="absolute left-0 top-0 w-full md:hidden">
         <Image
           src="/top-world.png"
@@ -21,7 +15,6 @@ export default function World() {
         />
       </div>
 
-      {/* Bottom avatars strip */}
       <div className="absolute bottom-0 left-0 w-full md:hidden">
         <Image
           src="/bottom-world.png"
@@ -32,11 +25,6 @@ export default function World() {
         />
       </div>
 
-      {/* ════════════════════════════════════════════
-          DESKTOP layout — left / right strips
-      ════════════════════════════════════════════ */}
-      
-      {/* Left avatars — absolute to left edge */}
       <div className="absolute left-0 top-1/2 hidden h-full w-[35%] -translate-y-1/2 md:block lg:w-[40%]">
         <Image
           src="/left-world.png"
@@ -47,8 +35,6 @@ export default function World() {
           priority
         />
       </div>
-
-      {/* Right avatars — absolute to right edge */}
       <div className="absolute right-0 top-1/2 hidden h-full w-[35%] -translate-y-1/2 md:block lg:w-[40%]">
         <Image
           src="/right-world.png"
@@ -60,7 +46,6 @@ export default function World() {
         />
       </div>
 
-      {/* ── Center text ── */}
       <div className="relative z-10 flex max-w-[540px] flex-col items-center px-6 text-center">
         <h2 className="mb-5 text-4xl font-extrabold tracking-tight text-[#141517] md:text-5xl lg:text-[3.25rem] lg:leading-tight">
           Join a world of learning

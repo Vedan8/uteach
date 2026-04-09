@@ -9,10 +9,8 @@ const Intro = () => {
       <div className="w-full">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
           
-          {/* Left Content */}
           <div className="flex-1 max-w-[850px] xl:max-w-[1000px]">
             
-            {/* Heading */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#0F172A] leading-tight">
               <span className="relative inline-block">
                 <span className="relative z-10">Teach</span>
@@ -27,14 +25,12 @@ const Intro = () => {
               <span className="block sm:inline">students worldwide</span>
             </h1>
 
-            {/* Description */}
             <p className="mt-6 text-base sm:text-lg text-[#0F172A] leading-relaxed">
               Amet nunc diam orci duis ut sit diam arcu, nec. Eleifend proin
               massa tincidunt viverra lectus pulvinar. Nunc ipsum est
               pellentesque turpis ultricies.
             </p>
 
-            {/* CTA Buttons */}
             <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
               <Link
                 href="/signup"
@@ -51,8 +47,6 @@ const Intro = () => {
                 View Demo
               </Link>
             </div>
-
-            {/* Trusted By */}
             <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
               <p className="text-sm text-gray-400 leading-tight">
                 Trusted by <br className="hidden sm:block" />
@@ -73,8 +67,6 @@ const Intro = () => {
               </div>
             </div>
           </div>
-
-          {/* Right Image */}
           <div className="flex-1 flex justify-center lg:justify-end">
             <Image
               src="/intro.png"

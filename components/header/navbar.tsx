@@ -9,11 +9,9 @@ const Navbar = () => {
   const [resourcesOpen, setResourcesOpen] = useState(false);
 
   return (
-    // FIX: Changed 'w-fill' to 'w-full' and used responsive padding (px-4 for mobile, lg:px-[80px] for desktop)
     <nav className="w-full bg-white px-6 py-[12px] lg:px-[80px] font-roboto">
       <div className="w-full">
         <div className="flex items-center justify-between h-16 lg:h-[72px]">
-          {/* Logo */}
           <Link href="/" className="flex items-center shrink-0 gap-[2px]">
             <Image 
                 src="/logo.png" 
@@ -26,7 +24,6 @@ const Navbar = () => {
             </span>
           </Link>
 
-          {/* Desktop Nav Links */}
           <div className="hidden lg:flex items-center gap-[58px] ml-16 w-[515px]">
             <Link
               href="/products"
@@ -61,7 +58,6 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Desktop Auth Buttons — pushed to far right */}
           <div className="hidden lg:flex items-center gap-6 ml-auto">
             <Link
               href="/login"
@@ -77,7 +73,6 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile Hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="lg:hidden p-2 text-[#1a2234]"
@@ -96,9 +91,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {mobileOpen && (
-        // FIX: Removed fixed borders that might cause overflow, added slight shadow for better mobile UI
         <div className="lg:hidden mt-2 border-t border-gray-100 bg-white shadow-sm rounded-b-md">
           <div className="py-4 space-y-3">
             <Link href="/products" className="block text-[15px] font-medium text-[#1a2234] py-2">

@@ -40,16 +40,15 @@ export default function Review() {
   const [current, setCurrent] = useState(0);
   const [visibleCount, setVisibleCount] = useState(4);
 
-  // Responsive logic to determine how many cards to show
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 640) setVisibleCount(1);      // Mobile
-      else if (window.innerWidth < 1024) setVisibleCount(2); // Tablet
-      else if (window.innerWidth < 1280) setVisibleCount(3); // Small Desktop
-      else setVisibleCount(4);                              // Large Desktop
+      if (window.innerWidth < 640) setVisibleCount(1);      
+      else if (window.innerWidth < 1024) setVisibleCount(2);
+      else if (window.innerWidth < 1280) setVisibleCount(3); 
+      else setVisibleCount(4);                              
     };
 
-    handleResize(); // Set initial value
+    handleResize(); 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -62,8 +61,7 @@ export default function Review() {
   const canNext = current < reviews.length - visibleCount;
 
   return (
-    <section className="w-full overflow-hidden bg-white py-16 md:py-24">
-      {/* Container stretches full width with edge padding */}
+    <section className="w-full overflow-hidden bg-white py-16 md:py-24 font-roboto">
       <div className="w-full px-6 md:px-12 lg:px-20">
 
         <div className="mb-12 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
@@ -112,7 +110,6 @@ export default function Review() {
             {reviews.map((review, i) => (
               <div
                 key={i}
-                // Calculates precise width based on how many cards should be visible
                 style={{ width: `calc(100% / ${visibleCount})` }}
                 className="flex-shrink-0 px-3 lg:px-4"
               >
@@ -141,7 +138,6 @@ export default function Review() {
           </div>
         </div>
 
-        {/* Navigation Dots */}
         <div className="mt-6 flex justify-center gap-3">
           {Array.from({ length: Math.max(1, reviews.length - visibleCount + 1) }).map((_, i) => (
             <button

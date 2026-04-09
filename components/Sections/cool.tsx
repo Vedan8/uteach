@@ -2,14 +2,9 @@ import Image from "next/image";
 
 export default function Cool() {
   return (
-    // Reduced vertical padding (py-10 md:py-16 lg:py-20) to shrink the height
-    <section className="w-full overflow-hidden bg-white py-10 md:py-16 lg:py-20">
+    <section className="w-full overflow-hidden bg-white py-10 md:py-16 lg:py-20 font-roboto">
       <div className="flex w-full flex-col items-center justify-between gap-10 px-6 md:flex-row lg:px-20">
 
-        {/* ════════════════════════════════
-            LEFT — text content
-        ════════════════════════════════ */}
-        {/* Increased width to 55% on medium screens and 60% on extra large screens */}
         <div className="w-full md:w-[55%] xl:w-[60%]">
           <h2 className="mb-6 text-5xl font-extrabold leading-tight tracking-tight text-[#0F172A] md:text-6xl lg:text-[4.5rem]">
             All the cool{" "}
@@ -25,7 +20,6 @@ export default function Cool() {
             </span>
           </h2>
 
-          {/* Removed max-w-xl so the text spans wider across its new, larger container */}
           <p className="mb-8 text-lg leading-relaxed text-gray-600 lg:w-[90%] lg:text-xl">
             Mauris consequat, cursus pharetra et, habitasse rhoncus quis odio ac.
             In et dolor eu donec maecenas nulla. Cum sed orci, sit pellentesque
@@ -54,12 +48,10 @@ export default function Cool() {
           </a>
         </div>
 
-        {/* ════════════════════════════════
-            RIGHT — composite image
-        ════════════════════════════════ */}
-        {/* Takes up the remaining 45% / 40% of the screen space */}
+       
+      
         <div className="relative mt-10 flex w-full justify-center md:mt-0 md:w-[45%] xl:w-[40%] md:justify-end">
-          {/* Yellow sparkle dots */}
+       
           <span className="pointer-events-none absolute right-12 top-4 select-none text-2xl font-bold text-yellow-400 lg:right-24">+</span>
           <span className="pointer-events-none absolute right-28 top-14 h-3 w-3 select-none rounded-full bg-yellow-400 lg:right-40" />
           <span className="pointer-events-none absolute right-16 top-24 h-2 w-2 select-none rounded-full bg-yellow-400 lg:right-20" />

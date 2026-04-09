@@ -5,8 +5,6 @@ const checkItems = [
   "Tellus arcu sed consequat ac velit ut eu blandit.",
   "Ullamcorper ornare in et egestas dolor orci.",
 ];
-
-// Responsive Sparkles
 const sparkles = [
   { className: "-top-[2%] left-[15%] md:top-[8%] md:-left-[5%]", size: 8 },
   { className: "top-[5%] left-[45%] md:top-[18%] md:-left-[2%]", size: 5 },
@@ -24,17 +22,11 @@ const plusMarks = [
 
 export default function AllInOneSection() {
   return (
-    <section className="mx-auto relative w-full overflow-hidden bg-white py-6 md:py-10 lg:py-14 lg:px-10 px-5">
-      {/* Removed max-width for extreme left/right stretching. 
-        Reduced gaps to half. 
-      */}
+    <section className="mx-auto relative w-full overflow-hidden bg-white py-6 md:py-10 lg:py-14 lg:px-10 px-5 font-roboto">
+     
       <div className="mx-auto flex w-full flex-col items-center justify-between gap-8 md:flex-row md:gap-5 lg:px-10">
 
-        {/* ════════════════════════════════
-            LEFT — text content
-        ════════════════════════════════ */}
         <div className="relative z-20 w-full shrink-0 md:w-[55%] lg:w-[60%] xl:w-[65%]">
-          {/* Added lg:whitespace-nowrap to force single line on laptops. Margins halved. */}
           <h2 className="mb-3 text-3xl font-extrabold leading-[1.15] tracking-tight text-[#1a2431] sm:text-4xl lg:whitespace-nowrap lg:text-5xl xl:text-[56px]">
             An{" "}
             <span className="relative z-0 inline-block text-[#1a2431]">
@@ -44,8 +36,6 @@ export default function AllInOneSection() {
     alt="Highlight"
     width={260}
     height={20}
-    // -z-10 ensures the image sits behind the text
-    // translate-y-[30%] mimics the "underline" positioning from your previous design
     className="absolute left-0 bottom-0 -z-10 w-full translate-y-[30%]"
   />
 </span>{" "}
@@ -94,12 +84,8 @@ export default function AllInOneSection() {
           </a>
         </div>
 
-        {/* ════════════════════════════════
-            RIGHT — blob + group image
-        ════════════════════════════════ */}
         <div className="relative flex w-full justify-end md:w-[50%] lg:w-[55%] xl:w-[60%]">
 
-  {/* Sparkles */}
   {sparkles.map((s, i) => (
     <span
       key={`sparkle-${i}`}
@@ -108,7 +94,6 @@ export default function AllInOneSection() {
     />
   ))}
 
-  {/* Plus marks */}
   {plusMarks.map((p, i) => (
     <span
       key={`plus-${i}`}
@@ -118,7 +103,6 @@ export default function AllInOneSection() {
     </span>
   ))}
 
-  {/* Blob */}
   <div className="pointer-events-none absolute inset-y-0 left-[10%] z-0 w-[120%] h-[80%] md:-left-[60%] lg:-left-[80%] xl:-left-[80%]">
   <Image
     src="/blob.png"
@@ -129,7 +113,6 @@ export default function AllInOneSection() {
   />
 </div>
 
-  {/* ✅ MAIN IMAGE FIX */}
   <div className="relative z-10 w-full mr-[80px]">
     <Image
       src="/group.png"
