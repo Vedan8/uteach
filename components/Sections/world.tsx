@@ -1,68 +1,65 @@
 import Image from "next/image";
+import styles from "@/app/css/world.module.css"
 
 export default function World() {
   return (
-    <section className="relative flex w-full flex-col items-center justify-center overflow-hidden bg-[#FFC107] py-36 md:py-0 min-h-[700px] md:min-h-[1000px] lg:min-h-[900px] font-roboto">
-
-      <div className="absolute left-0 top-0 w-full md:hidden">
+    <div className={styles.world_section}>
+      <div className={styles.mobile_top_image}>
         <Image
           src="/top-world.png"
           alt=""
           width={600}
           height={240}
-          className="w-full object-cover object-top"
+          className={styles.img_top}
           priority
         />
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full md:hidden">
+      <div className={styles.mobile_bottom_image}>
         <Image
           src="/bottom-world.png"
           alt=""
           width={600}
           height={240}
-          className="w-full object-cover object-bottom"
+          className={styles.img_bottom}
         />
       </div>
 
-      <div className="absolute left-0 top-1/2 hidden h-full w-[35%] -translate-y-1/2 md:block lg:w-[40%]">
+      <div className={styles.desktop_left_image}>
         <Image
           src="/left-world.png"
           alt=""
-          width={600}
-          height={720}
-          className="h-full w-full object-contain object-left"
+          width={467}
+          height={636}
+          className={styles.img_left}
           priority
         />
       </div>
-      <div className="absolute right-0 top-1/2 hidden h-full w-[35%] -translate-y-1/2 md:block lg:w-[40%]">
+
+      <div className={styles.desktop_right_image}>
         <Image
           src="/right-world.png"
           alt=""
-          width={600}
-          height={720}
-          className="h-full w-full object-contain object-right"
+          width={470}
+          height={598}
+          className={styles.img_right}
           priority
         />
       </div>
 
-      <div className="relative z-10 flex max-w-[540px] flex-col items-center px-6 text-center">
-        <h2 className="mb-5 text-4xl font-extrabold tracking-tight text-[#141517] md:text-5xl lg:text-[3.25rem] lg:leading-tight">
+      <div className={styles.content_wrapper}>
+        <h2 className={styles.world_heading}>
           Join a world of learning
         </h2>
-        <p className="mb-10 text-base leading-relaxed text-[#141517]/80 md:text-lg lg:text-xl">
+        <p className={styles.world_paragraph}>
           Malesuada ut aliquam at ac est nisi, interdum etiam dignissim.
-          <br className="hidden md:block" />
+          <br className={styles.desktop_break} />
           Risus elit et fringilla habitant ut facilisi.
         </p>
-        <a
-          href="#"
-          className="rounded-xl bg-[#ea580c] px-12 py-4 text-base font-bold text-white shadow-md transition-all hover:scale-105 hover:bg-[#c2410c] lg:text-lg"
-        >
+        <a href="#" className={styles.signup_button}>
           Sign Up Now
         </a>
       </div>
-
-    </section>
+    </div>
   );
 }

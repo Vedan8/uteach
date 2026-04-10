@@ -1,0 +1,153 @@
+.footer {
+  width: 100%;
+  background-color: #0F172A;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  padding: 96px 96px;
+}
+
+.top_layout {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+
+.logo_wrapper {
+  flex-shrink: 0;
+  width: 192px;
+}
+
+.logo_img {
+  object-fit: contain;
+}
+
+.links_grid {
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+}
+
+.column_heading {
+  margin-bottom: 24px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.link_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.link_item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #E2E8F0;
+}
+
+.badge {
+  margin-left: 4px;
+  font-size: 10px;
+  color: #a855f7;
+}
+
+.divider_container {
+  width: 100%;
+  padding: 0 96px;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid #1f2937;
+}
+
+.bottom_bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 96px;
+  font-size: 16px;
+}
+
+.bottom_right {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.legal_links, 
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.legal_link, 
+.action_btn {
+  text-decoration: none;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.accessibility_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  color: inherit;
+  border: 1px solid #6b7280;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+}
+
+@media (max-width: 1080px) {
+  .container, 
+  .divider_container, 
+  .bottom_bar {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .container {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .top_layout {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .links_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom_bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .bottom_right {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
