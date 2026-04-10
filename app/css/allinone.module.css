@@ -93,6 +93,10 @@
     height: 546px;
     z-index: 2;
 }
+.arrow{
+    height: 24px;
+    width: 24px;
+}
 @media (max-width: 1080px) {
     .allinone{
         gap: 32px;
