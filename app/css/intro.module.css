@@ -1,0 +1,187 @@
+.section{
+    width: 100%;
+    height: fit-content;
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+.left{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    position: relative;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    gap: 32px;
+}
+.underline{
+    height: 14px;
+    width: 200px;
+    position: absolute;
+    top: 60px;
+    left: 5px;
+    z-index: -1;
+}
+.heading{
+    width: 575.4px;
+    height: 158px;
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 110%;
+    letter-spacing: 0%;
+}
+.description{
+    width: 575.4px;
+    height: 114px;
+    font-weight: 400px;
+    font-size: 24px;
+    line-height: 160%;
+}
+.buttons{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.primaryBtn{
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid #EA580C;
+    padding-top: 20px;
+    padding-right: 48px;
+    padding-bottom: 20px;
+    padding-left: 48px;
+    border-radius: 8px;
+    background-color: #EA580C;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: white;
+}
+.secondaryBtn{
+    height: fit-content;
+    width: fit-content;
+    padding-top: 16px;
+    padding-right: 8px;
+    padding-bottom: 16px;
+    padding-left: 8px;
+    display: flex;
+}
+.play{
+    height: 24px;
+    width: 24px;
+}
+.view_video{
+    padding-left: 16px;
+    padding-right: 16px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: #2563EB;
+}
+.companies{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    gap: 48px;
+    align-items: center;
+}
+.company_logos{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.trustedText{
+    height: 44px;
+    width: 135px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    color: #475569;
+}
+.logo{
+    width: 25.21px;
+    height: 32px;
+}
+.heroImage{
+    width: 1424.6px;
+}
+@media (max-width: 1080px) {
+    .section{
+        flex-direction: column;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        padding-left: 16px;
+        padding-right: 16px;
+        gap: 48px;
+    }
+    .left{
+        gap: 32px;
+    }
+    .underline{
+        width: 108px;
+        height: 12px;
+        top: 30px;
+    }
+    .heading{
+        width: 361px;
+        height: 88px;
+        font-weight: 700;
+        font-size: 40px;
+    }
+    .description{
+        width: 361px;
+        height: 88px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: 0%;
+    }
+    .buttons{
+        gap: 24px;
+    }
+    .primaryBtn{
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 28px;
+        padding-right: 28px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .secondaryBtn{
+        padding-top: 12px;
+        padding-left: 8px;
+        padding-bottom: 12px;
+        padding-right: 8px;
+    }
+    .view_video{
+        font-size: 16px;
+    }
+    .companies{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .trustedText{
+        width: 361px;
+        height: 22px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+    }
+    .company_logos{
+        gap: 24px;
+    }
+}

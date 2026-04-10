@@ -12,26 +12,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: roboto;
+  color: #0F172A;
 }
 
 html {
   scroll-behavior: smooth;
 }
-
-body {
-  color: #1a1a2e;
-  background: #ffffff;
-  font-family: var(--default-font-family);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-@layer utilities {
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
-}   
