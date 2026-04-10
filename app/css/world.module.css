@@ -60,6 +60,8 @@
 }
 
 .world_heading {
+  width: 1280px;
+  height: 62px;
   font-weight: 800;
   font-size: 52px;
   line-height: 1.25;

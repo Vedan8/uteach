@@ -1,16 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import styles from "@/app/css/tools.module.css";
 
 export default function Tools() {
   return (
     <div className={styles.tools}>
-      <Image
-        src={"/vector.png"}
-        alt="underline"
-        height={10}
-        width={121}
-        className={styles.underline}
-      />
       <Image
         src={"/right_blob.png"}
         alt="blob"
@@ -25,11 +20,29 @@ export default function Tools() {
         width={652}
         className={styles.left_blob}
       />
+
       <div className={styles.info}>
-        <h2 className={styles.heading}>All the tools that you need</h2>
-        <p className={styles.paragraph}>Sit elit feugiat turpis sed integer integer accumsan turpis. Sed suspendisse nec lorem mauris.
-          Pharetra, eu imperdiet ipsum ultrices amet, dui sit suspendisse.</p>
+        
+          <h2 className={styles.heading}>All the {" "}
+            <span className={styles.headingWrapper}> 
+            tools
+            <Image
+            src={"/vector.png"}
+            alt="underline"
+            height={10}
+            width={121}
+            className={styles.underline}
+          /></span>{" "}
+            that you need</h2>
+        
+
+        <p className={styles.paragraph}>
+          Sit elit feugiat turpis sed integer integer accumsan turpis. Sed
+          suspendisse nec lorem mauris. Pharetra, eu imperdiet ipsum ultrices
+          amet, dui sit suspendisse.
+        </p>
       </div>
+
       <Image
         src={"/desktop.png"}
         alt="desktop"
@@ -52,5 +65,5 @@ export default function Tools() {
         className={styles.apps}
       />
     </div>
-  )
+  );
 }

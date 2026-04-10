@@ -9,13 +9,18 @@
     background-color: #F1F5F9;
     position: relative;
 }
+.headingWrapper{
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+}
 .underline{
     width: 121px;
     height: 13px;
     position: absolute;
-    top: 125px;
-    left: 39.5%;
-    z-index: 1;
+    bottom: 3px;
+    z-index: -1;
 }
 .info{
     display: flex;
@@ -34,6 +39,7 @@
     letter-spacing: 0%;
     text-align: center;
     z-index: 2;
+    position: relative;
 }
 .paragraph{
     width: 1280px;
@@ -49,10 +55,9 @@
     width: 523px;
     height: 868.65px;
     position: absolute;
-    top: 250px;
+    top: 45px;
     right: 0;
     z-index: 1;
-    top: 45px;
 }
 .left_blob{
     width: 561.28px;
@@ -118,12 +123,15 @@
         height: 64px;
         width: 100%;
         object-fit: cover;
+        max-width: none;
+        object-position: left;
     }
     .underline{
         width: 58px;
         height: 9px;
-        top: 66px;
-        left: 23%;
+        bottom: 1px;
+        left: 0;
+        transform: none;
     }
     .left_blob{
         width: 157.84px;

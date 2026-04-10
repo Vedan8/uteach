@@ -3,8 +3,8 @@ import styles from "@/app/css/world.module.css"
 
 export default function World() {
   return (
-    <div className={styles.world_section}>
-      <div className={styles.mobile_top_image}>
+    <section className={styles.world_section}>
+      <figure className={styles.mobile_top_image}>
         <Image
           src="/top-world.png"
           alt=""
@@ -13,9 +13,9 @@ export default function World() {
           className={styles.img_top}
           priority
         />
-      </div>
+      </figure>
 
-      <div className={styles.mobile_bottom_image}>
+      <figure className={styles.mobile_bottom_image}>
         <Image
           src="/bottom-world.png"
           alt=""
@@ -23,9 +23,9 @@ export default function World() {
           height={240}
           className={styles.img_bottom}
         />
-      </div>
+      </figure>
 
-      <div className={styles.desktop_left_image}>
+      <figure className={styles.desktop_left_image}>
         <Image
           src="/left-world.png"
           alt=""
@@ -34,9 +34,9 @@ export default function World() {
           className={styles.img_left}
           priority
         />
-      </div>
+      </figure>
 
-      <div className={styles.desktop_right_image}>
+      <figure className={styles.desktop_right_image}>
         <Image
           src="/right-world.png"
           alt=""
@@ -45,21 +45,23 @@ export default function World() {
           className={styles.img_right}
           priority
         />
-      </div>
+      </figure>
 
-      <div className={styles.content_wrapper}>
+      <article className={styles.content_wrapper}>
         <h2 className={styles.world_heading}>
           Join a world of learning
         </h2>
+
         <p className={styles.world_paragraph}>
           Malesuada ut aliquam at ac est nisi, interdum etiam dignissim.
           <br className={styles.desktop_break} />
           Risus elit et fringilla habitant ut facilisi.
         </p>
+
         <a href="#" className={styles.signup_button}>
           Sign Up Now
         </a>
-      </div>
-    </div>
+      </article>
+    </section>
   );
 }
