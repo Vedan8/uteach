@@ -1,0 +1,167 @@
+.allinone{
+    height: fit-content;
+    width: 100%;
+    padding: 80px;
+    display: flex;
+    gap: 80px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.blob{
+    height: 448px;
+    width: 506px;
+    position: absolute;
+    z-index: 1;
+    top: 17%;
+    left: 50%;
+}
+.info{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    z-index: 2;
+}
+.underline{
+    width: 250px;
+    height: 15px;
+    position: absolute;
+    top: 31%;
+    left: 160px;
+    z-index: 1;
+}
+.heading{
+    width: 544px;
+    height: 124px;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 110%;
+    letter-spacing: 0%;
+    z-index: 2;
+}
+.list{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.items{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    gap: 8px;
+}
+.paragraph{
+    display: none;
+}
+.check{
+    height: 24px;
+    width: 24px;
+}
+.list_text{
+    width: 457px;
+    height: 36px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 180%;
+}
+.mob_group{
+    display: none;
+}
+.button{
+    height: fit-content;
+    width: fit-content;
+    padding-top: 16px;
+    display: flex;
+    padding-bottom: 16px;
+    padding-right: 8px;
+}
+.button_text{
+    width: 245px;
+    height: 24px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: #2563EB;
+}
+.group{
+    width: 656px;
+    height: 546px;
+    z-index: 2;
+}
+@media (max-width: 1080px) {
+    .allinone{
+        gap: 32px;
+        padding-top: 48px;
+        padding-right: 16px;
+        padding-bottom: 48px;
+        padding-left: 16px;
+        flex-direction: column;
+    }
+    .blob{
+        width: 397px;
+        height: 336px;
+        left: -27%;
+        top: 650px;
+    }
+    .info{
+        align-items: flex-start;
+        gap: 24px;
+    }
+    .heading{
+        width: 361px;
+        height: 52px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 110%;
+    }
+    .paragraph{
+        display: block;
+        width: 361px;
+        height: 88px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+    }
+    .list{
+        gap: 16px;
+    }
+    .list_text{
+        width: 329px;
+        height: 72px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 180%;
+    }
+    .button{
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    .button_text{
+        width: 200px;
+        height: 24px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+    }
+    .group{
+        display: none;
+    }
+    .mob_group{
+        display: block;
+        width: 361px;
+        height: 472px;
+        z-index: 2;
+    }
+    .underline{
+        width: 110px;
+        height: 7px;
+        top: 67px;
+        left: 48px;
+    }
+}
