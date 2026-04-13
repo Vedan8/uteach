@@ -1,0 +1,52 @@
+.image{
+    height: 64px;
+    width: 64px;
+}
+.title{
+    font-weight: 800;
+    font-size: 72px;
+    line-height: 110%;
+    text-align: center;
+    color: #FACC15;
+}
+.paragraph{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 160%;
+    text-align: center;
+    color: #FACC15;
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+@media (max-width: 700px){
+    .row{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 48px;
+    }
+    .item{
+        gap: 8px;
+    }
+    .title{
+        width: 361px;
+        height: 53px;
+        font-size: 48px;
+    }
+    .paragraph{
+        width: 361px;
+        height: 22px;
+        font-size: 16px;
+        line-height: 140%;
+    }
+}

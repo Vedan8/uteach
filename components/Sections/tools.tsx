@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import styles from "@/app/css/tools.module.css";
+import Appframe from "@/components/updates/appframe"
 
 export default function Tools() {
   return (
@@ -57,13 +58,7 @@ export default function Tools() {
         width={1093}
         className={styles.lines}
       />
-      <Image
-        src={"/apps.png"}
-        alt="desktop"
-        height={64}
-        width={1160}
-        className={styles.apps}
-      />
+      <Appframe />
     </div>
   );
 }

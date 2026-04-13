@@ -1,0 +1,18 @@
+.appframe{
+    width: 1160px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+}
+.app{
+    width: 64px;
+    height: 64px;
+}
+@media (max-width:1080px){
+    .appframe{
+        width: 377px;
+        height: fit-content;
+        gap: 24px;
+        overflow-x: scroll;
+    }
+}

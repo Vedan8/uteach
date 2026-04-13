@@ -42,7 +42,8 @@
     position: relative;
 }
 .paragraph{
-    width: 1280px;
+    max-width: 900px;
+    width: 100%;
     height: 77px;
     font-weight: 400;
     font-size: 20px;
@@ -78,10 +79,7 @@
     position: absolute;
     bottom: 170px;
 }
-.apps{
-    width: 1160px;
-}
-@media (max-width: 1080px){
+@media (max-width: 700px){
     .tools{
         padding-left: 16px;
         padding-right: 16px;
@@ -94,7 +92,8 @@
         gap: 24px;
     }
     .heading{
-        width: 362px;
+        max-width: 362px;
+        width: 100%;
         height: 26px;
         font-weight: 700;
         font-size: 24px;
@@ -104,8 +103,8 @@
         z-index: 2;
     }
     .paragraph{
-        width: 361px;
-        height: 88px;
+        max-width: 362px;
+        width: 100%;
         font-weight: 400;
         font-size: 16px;
         line-height: 140%;
@@ -115,16 +114,10 @@
     }
     .desktop{
         height: 226px;
+        width: 361px;
     }
     .lines{
         display: none;
-    }
-    .apps{
-        height: 64px;
-        width: 100%;
-        object-fit: cover;
-        max-width: none;
-        object-position: left;
     }
     .underline{
         width: 58px;

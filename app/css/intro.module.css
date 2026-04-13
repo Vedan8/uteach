@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     gap: 80px;
+    overflow: visible;
 }
 .left{
     width: 100%;
@@ -31,7 +32,8 @@
     z-index: -1;
 }
 .heading{
-    width: 575.4px;
+    max-width: 575.4px;
+    width: 100%;
     height: 158px;
     font-weight: 800;
     font-size: 72px;
@@ -39,7 +41,8 @@
     letter-spacing: 0%;
 }
 .description{
-    width: 575.4px;
+    max-width: 575.4px;
+    width: 100%;
     height: 114px;
     font-weight: 400px;
     font-size: 24px;
@@ -115,34 +118,40 @@
     width: 25.21px;
     height: 32px;
 }
-.heroImage{
-    width: 1424.6px;
+.right{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
-@media (max-width: 1080px) {
+.heroImage{
+    width: 635px;
+    height: auto;
+}
+@media (min-width:700px) and (max-width:1300px){
     .section{
-        flex-direction: column;
-        padding-top: 48px;
-        padding-bottom: 48px;
-        padding-left: 16px;
-        padding-right: 16px;
-        gap: 48px;
-    }
-    .left{
-        gap: 32px;
+        gap: 0;
     }
     .underline{
         width: 108px;
         height: 12px;
         top: 30px;
+        object-fit: cover;
+    }
+    .heroImage{
+        width: 446px;
+        height: auto;
     }
     .heading{
-        width: 361px;
+        max-width: 361px;
+        width: 100%;
         height: 88px;
         font-weight: 700;
         font-size: 40px;
     }
     .description{
-        width: 361px;
+        max-width: 361px;
+        width: 100%;
         height: 88px;
         font-weight: 400;
         font-size: 16px;
@@ -176,6 +185,77 @@
     }
     .trustedText{
         width: 361px;
+        height: 22px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+    }
+    .company_logos{
+        gap: 24px;
+    }
+}
+@media (max-width: 700px) {
+    .section{
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        padding-left: 16px;
+        padding-right: 16px;
+        gap: 48px;
+    }
+    .left{
+        gap: 32px;
+    }
+    .underline{
+        width: 108px;
+        height: 12px;
+        top: 30px;
+    }
+    .heading{
+        max-width: 361px;
+        width: 100%;
+        height: 88px;
+        font-weight: 700;
+        font-size: 40px;
+    }
+    .description{
+        max-width: 361px;
+        width: 100%;
+        height: 88px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: 0%;
+    }
+    .buttons{
+        gap: 24px;
+    }
+    .primaryBtn{
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 28px;
+        padding-right: 28px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .secondaryBtn{
+        padding-top: 12px;
+        padding-left: 8px;
+        padding-bottom: 12px;
+        padding-right: 8px;
+    }
+    .view_video{
+        font-size: 16px;
+    }
+    .companies{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .trustedText{
+        max-width: 361px;
+        width: 100%;
         height: 22px;
         font-weight: 400;
         font-size: 16px;

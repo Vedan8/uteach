@@ -76,7 +76,7 @@
   line-height: 140%;
   color: #475569;
 }
-@media (max-width:1080px){
+@media (max-width:700px){
   .review{
     padding-left: 16px;
     padding-right: 16px;

@@ -115,7 +115,21 @@
 .hamburger{
     display: none;
 }
-@media (max-width: 1080px) {
+@media (min-width:700px) and (max-width:1300px){
+    .menu{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+        height: 24px;
+        width: 24px;
+    }
+    .right{
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
     .hamburger{
         display: block;
         height: 24px;

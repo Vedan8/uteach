@@ -4,15 +4,7 @@
     padding: 80px;
     background-color: #0F172A;
 }
-.row{
-    display: flex;
-    justify-content: space-around;
-}
-.image{
-    height: 213px;
-    width: 370px;
-}
-@media (max-width: 1080px){
+@media (max-width: 700px){
     .reach{
         padding-top: 48px;
         padding-right: 16px;
@@ -24,9 +16,5 @@
         justify-content: center;
         align-items: center;
         gap: 48px;
-    }
-    .image{
-        height: 155px;
-        width: 260px;
     }
 }

@@ -14,10 +14,25 @@
     align-items: center;
     gap: 16px;
 }
-.col1{ width: 172px; height: 546px; padding-top: 80px; }
-.col2{ width: 128px; height: 651px; padding-top: 32px; }
-.col3{ width: 128px; height: 567px; }
-.col4{ width: 160px; height: 436px; }
+.col1{ 
+    width: 172px; 
+    height: 546px; 
+    padding-top: 80px; 
+}
+.col2{ 
+    width: 128px; 
+    height: 651px; 
+    padding-top: 
+    32px; 
+}
+.col3{ 
+    width: 128px; 
+    height: 567px; 
+}
+.col4{ 
+    width: 160px; 
+    height: 436px; 
+}
 
 .headingWrapper{
     position: relative;
@@ -69,30 +84,111 @@
 
 .arrow{ height: 24px; width: 24px; }
 
-@media (max-width: 1080px) {
+@media (max-width: 700px) {
     .student{
         padding: 48px 16px;
         flex-direction: column-reverse;
         gap: 32px;
     }
-    .data{ gap: 24px; }
+    .data{ 
+        gap: 24px; 
+    }
     .heading{
-        width: 361px;
+        max-width: 361px;
+        width: 100%;
         font-size: 24px;
     }
     .paragraph{
-        width: 361px;
+        max-width: 361px;
+        width: 100%;
         font-size: 16px;
     }
-    .col1{ width: 94px; height: 281px; padding-top: 48px; }
-    .col2{ width: 72px; height: 309px; }
-    .col3{ width: 72px; height: 283px; }
-    .col4{ width: 88px; height: 218px; }
+    .col1{ 
+        width: 94px; 
+        height: 281px; 
+        padding-top: 48px; 
+    }
+    .col2{ 
+        width: 72px; 
+        height: 309px; 
+    }
+    .col3{ 
+        width: 72px; 
+        height: 283px; 
+    }
+    .col4{ 
+        width: 88px; 
+        height: 218px; 
+    }
 
     .aeroplane{
         width: 24px;
         height: 24px;
         top: -15px;
         right: 0;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1340px) {
+    .student{
+        padding: 48px;
+        gap: 48px;
+    }
+
+    .student_images{
+        gap: 12px;
+        justify-content: flex-start;
+        padding-left: 80px;
+    }
+
+    .col1{ 
+        width: 94px; 
+        height: 281px; 
+        padding-top: 48px; 
+    }
+    .col2{ 
+        width: 72px; 
+        height: 309px; 
+    }
+    .col3{ 
+        width: 72px; 
+        height: 283px; 
+    }
+    .col4{ 
+        width: 88px; 
+        height: 218px; 
+    }
+
+    .info{
+        width: 50%;
+    }
+
+    .data{
+        gap: 24px;
+    }
+
+    .heading{
+        width: 100%;
+        height: auto;
+        font-size: 36px;
+        line-height: 120%;
+    }
+
+    .paragraph{
+        width: 100%;
+        height: auto;
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    .button_text{
+        width: auto;
+        font-size: 16px;
+    }
+
+    .aeroplane{
+        width: 40px;
+        height: 40px;
+        top: -25px;
     }
 }

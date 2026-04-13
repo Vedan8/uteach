@@ -130,7 +130,8 @@
   }
 
   .world_heading {
-    width: 361px;
+    max-width: 361px;
+    width: 100%;
     height: 26px;
     font-size: 24px;
     font-weight: 700;
@@ -139,7 +140,8 @@
   }
 
   .world_paragraph {
-    width: 361px;
+    max-width: 361px;
+    width: 100%;
     height: 66px;
     font-weight: 400;
     font-size: 16px;
