@@ -21,7 +21,6 @@ html {
 }
 
 :root {
-  /* ================= COLORS ================= */
   --color-primary: #2563EB;
   --color-secondary: #EA580C;
   --color-dark: #0F172A;
@@ -35,7 +34,6 @@ html {
   --color-bg-light: #F1F5F9;
   --color-white: #FFFFFF;
 
-  /* ================= SPACING ================= */
   --space-xs: 8px;
   --space-sm: 12px;
   --space-md: 16px;
@@ -45,7 +43,6 @@ html {
   --space-3xl: 80px;
   --space-4xl: 96px;
 
-  /* ================= FONT SIZE ================= */
   --text-xs: 14px;
   --text-sm: 16px;
   --text-md: 18px;
@@ -56,23 +53,19 @@ html {
   --text-4xl: 56px;
   --text-5xl: 72px;
 
-  /* ================= LINE HEIGHT ================= */
   --leading-tight: 110%;
   --leading-normal: 140%;
   --leading-relaxed: 160%;
   --leading-loose: 180%;
 
-  /* ================= BORDER RADIUS ================= */
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 10px;
 
-  /* ================= SHADOWS ================= */
   --shadow-sm: 0px 0px 6px 0px #00000012;
   --shadow-md: 0px 10px 15px -3px #0000001A;
   --shadow-lg: 0px 20px 25px -5px #0000001A;
 
-  /* ================= BREAKPOINTS ================= */
   --bp-mobile: 700px;
   --bp-tablet: 1080px;
   --bp-desktop: 1300px;
