@@ -1,28 +1,31 @@
 .section{
     width: 100%;
     height: fit-content;
-    padding: 80px;
+    padding: var(--space-3xl);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 80px;
+    gap: var(--space-3xl);
     overflow: visible;
 }
+
 .left{
     width: 100%;
     height: fit-content;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: var(--space-3xl);
     position: relative;
 }
+
 .top{
     display: flex;
     flex-direction: column;
     width: 100%;
     height: fit-content;
-    gap: 32px;
+    gap: var(--space-xl);
 }
+
 .underline{
     height: 14px;
     width: 200px;
@@ -31,237 +34,274 @@
     left: 5px;
     z-index: -1;
 }
+
 .heading{
     max-width: 575.4px;
     width: 100%;
     height: 158px;
     font-weight: 800;
-    font-size: 72px;
-    line-height: 110%;
+    font-size: var(--text-5xl);
+    line-height: var(--leading-tight);
     letter-spacing: 0%;
 }
+
 .description{
     max-width: 575.4px;
     width: 100%;
     height: 114px;
     font-weight: 400px;
-    font-size: 24px;
-    line-height: 160%;
+    font-size: var(--text-xl);
+    line-height: var(--leading-relaxed);
 }
+
 .buttons{
     height: fit-content;
     width: fit-content;
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: var(--space-xl);
 }
+
 .primaryBtn{
     width: fit-content;
     height: fit-content;
-    border: 2px solid #EA580C;
+    border: 2px solid var(--color-secondary);
     padding-top: 20px;
-    padding-right: 48px;
+    padding-right: var(--space-2xl);
     padding-bottom: 20px;
-    padding-left: 48px;
-    border-radius: 8px;
-    background-color: #EA580C;
+    padding-left: var(--space-2xl);
+    border-radius: var(--radius-md);
+    background-color: var(--color-secondary);
     font-weight: 700;
-    font-size: 24px;
+    font-size: var(--text-xl);
     line-height: 24px;
     letter-spacing: 0.5px;
-    color: white;
+    color: var(--color-white);
 }
+
 .secondaryBtn{
     height: fit-content;
     width: fit-content;
-    padding-top: 16px;
-    padding-right: 8px;
-    padding-bottom: 16px;
-    padding-left: 8px;
+    padding-top: var(--space-md);
+    padding-right: var(--space-xs);
+    padding-bottom: var(--space-md);
+    padding-left: var(--space-xs);
     display: flex;
 }
+
 .play{
     height: 24px;
     width: 24px;
 }
+
 .view_video{
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
     font-weight: 500;
-    font-size: 20px;
+    font-size: var(--text-lg);
     line-height: 24px;
     letter-spacing: 0.5px;
-    color: #2563EB;
+    color: var(--color-primary);
 }
+
 .companies{
     display: flex;
     width: 100%;
     height: fit-content;
-    gap: 48px;
+    gap: var(--space-2xl);
     align-items: center;
 }
+
 .company_logos{
     display: flex;
-    gap: 40px;
+    gap: var(--space-xl);
     align-items: center;
 }
+
 .trustedText{
     height: 44px;
     width: 135px;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 140%;
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
     letter-spacing: 0%;
-    color: #475569;
+    color: var(--color-text-secondary);
 }
+
 .logo{
     width: 25.21px;
     height: 32px;
 }
+
 .right{
     width: 100%;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
 }
+
 .heroImage{
     width: 635px;
     height: auto;
 }
+
 @media (min-width:700px) and (max-width:1300px){
     .section{
         gap: 0;
     }
+
     .underline{
         width: 108px;
         height: 12px;
         top: 30px;
         object-fit: cover;
     }
+
     .heroImage{
         width: 446px;
         height: auto;
     }
+
     .heading{
         max-width: 361px;
         width: 100%;
         height: 88px;
         font-weight: 700;
-        font-size: 40px;
+        font-size: var(--text-3xl);
     }
+
     .description{
         max-width: 361px;
         width: 100%;
         height: 88px;
         font-weight: 400;
-        font-size: 16px;
-        line-height: 140%;
+        font-size: var(--text-sm);
+        line-height: var(--leading-normal);
         letter-spacing: 0%;
     }
+
     .buttons{
-        gap: 24px;
+        gap: var(--space-lg);
     }
+
     .primaryBtn{
-        padding-top: 12px;
-        padding-bottom: 12px;
+        padding-top: var(--space-sm);
+        padding-bottom: var(--space-sm);
         padding-left: 28px;
         padding-right: 28px;
-        font-size: 16px;
+        font-size: var(--text-sm);
         font-weight: 500;
     }
+
     .secondaryBtn{
-        padding-top: 12px;
-        padding-left: 8px;
-        padding-bottom: 12px;
-        padding-right: 8px;
+        padding-top: var(--space-sm);
+        padding-left: var(--space-xs);
+        padding-bottom: var(--space-sm);
+        padding-right: var(--space-xs);
     }
+
     .view_video{
-        font-size: 16px;
+        font-size: var(--text-sm);
     }
+
     .companies{
         flex-direction: column;
         align-items: flex-start;
-        gap: 16px;
+        gap: var(--space-md);
     }
+
     .trustedText{
         width: 361px;
         height: 22px;
         font-weight: 400;
-        font-size: 16px;
-        line-height: 140%;
+        font-size: var(--text-sm);
+        line-height: var(--leading-normal);
     }
+
     .company_logos{
-        gap: 24px;
+        gap: var(--space-lg);
     }
 }
+
 @media (max-width: 700px) {
     .section{
         flex-direction: column;
         align-items: flex-start;
-        padding-top: 48px;
-        padding-bottom: 48px;
-        padding-left: 16px;
-        padding-right: 16px;
-        gap: 48px;
+        padding-top: var(--space-2xl);
+        padding-bottom: var(--space-2xl);
+        padding-left: var(--space-md);
+        padding-right: var(--space-md);
+        gap: var(--space-2xl);
     }
+
     .left{
-        gap: 32px;
+        gap: var(--space-xl);
     }
+
     .underline{
         width: 108px;
         height: 12px;
         top: 30px;
     }
+
     .heading{
         max-width: 361px;
         width: 100%;
         height: 88px;
         font-weight: 700;
-        font-size: 40px;
+        font-size: var(--text-3xl);
     }
+
     .description{
         max-width: 361px;
         width: 100%;
         height: 88px;
         font-weight: 400;
-        font-size: 16px;
-        line-height: 140%;
+        font-size: var(--text-sm);
+        line-height: var(--leading-normal);
         letter-spacing: 0%;
     }
+
     .buttons{
-        gap: 24px;
+        gap: var(--space-lg);
     }
+
     .primaryBtn{
-        padding-top: 12px;
-        padding-bottom: 12px;
+        padding-top: var(--space-sm);
+        padding-bottom: var(--space-sm);
         padding-left: 28px;
         padding-right: 28px;
-        font-size: 16px;
+        font-size: var(--text-sm);
         font-weight: 500;
     }
+
     .secondaryBtn{
-        padding-top: 12px;
-        padding-left: 8px;
-        padding-bottom: 12px;
-        padding-right: 8px;
+        padding-top: var(--space-sm);
+        padding-left: var(--space-xs);
+        padding-bottom: var(--space-sm);
+        padding-right: var(--space-xs);
     }
+
     .view_video{
-        font-size: 16px;
+        font-size: var(--text-sm);
     }
+
     .companies{
         flex-direction: column;
         align-items: flex-start;
-        gap: 16px;
+        gap: var(--space-md);
     }
+
     .trustedText{
         max-width: 361px;
         width: 100%;
         height: 22px;
         font-weight: 400;
-        font-size: 16px;
-        line-height: 140%;
+        font-size: var(--text-sm);
+        line-height: var(--leading-normal);
     }
+
     .company_logos{
-        gap: 24px;
+        gap: var(--space-lg);
     }
 }

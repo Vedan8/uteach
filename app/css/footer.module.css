@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
-  background-color: #0F172A;
-  color: white;
+  background-color: var(--color-dark);
+  color: var(--color-white);
 }
 
 .icon {
@@ -11,13 +11,13 @@
 
 .container {
   width: 100%;
-  padding: 96px 96px;
+  padding: var(--space-4xl) var(--space-4xl);
 }
 
 .top_layout {
   display: flex;
   flex-direction: row;
-  gap: 80px;
+  gap: var(--space-3xl);
 }
 
 .logo_wrapper {
@@ -33,14 +33,14 @@
   display: grid;
   flex: 1;
   grid-template-columns: repeat(5, 1fr);
-  gap: 40px;
+  gap: var(--space-xl);
 }
 
 .column_heading {
-  margin-bottom: 24px;
-  font-size: 18px;
+  margin-bottom: var(--space-lg);
+  font-size: var(--text-md);
   font-weight: 600;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .link_list {
@@ -49,21 +49,21 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--space-md);
 }
 
 .link_item {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--space-xs);
   text-decoration: none;
-  font-size: 16px;
-  color: #E2E8F0;
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
 }
 
 .divider_container {
   width: 100%;
-  padding: 0 96px;
+  padding: 0 var(--space-4xl);
 }
 
 .divider {
@@ -73,28 +73,28 @@
 
 .footer_bottom {
   width: 100%;
-  padding: 32px 96px;
+  padding: var(--space-xl) var(--space-4xl);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 48px;
+  gap: var(--space-2xl);
 }
 
 .footer_bottom p {
-  font-size: 14px;
-  line-height: 140%;
-  color: #94A3B8;
+  font-size: var(--text-xs);
+  line-height: var(--leading-normal);
+  color: var(--color-text-muted);
 }
 
 .footer_links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: var(--space-xl);
 }
 
 .footer_links a {
-  font-size: 14px;
-  color: #E2E8F0;
+  font-size: var(--text-xs);
+  color: var(--color-text-light);
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -104,18 +104,18 @@
 @media (max-width: 1080px) {
   .container, 
   .divider_container {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
   }
 
   .container {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
   }
 
   .top_layout {
     flex-direction: column;
-    gap: 40px;
+    gap: var(--space-xl);
   }
 
   .links_grid {
@@ -125,12 +125,12 @@
   .footer_bottom {
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
-    padding: 24px;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
   }
 
   .footer_links {
     flex-wrap: wrap;
-    gap: 16px;
+    gap: var(--space-md);
   }
 }

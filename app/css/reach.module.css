@@ -1,20 +1,22 @@
 .reach{
     width: 100%;
     height: fit-content;
-    padding: 80px;
-    background-color: #0F172A;
+    padding: var(--space-3xl);
+    background-color: var(--color-dark);
 }
+
 @media (max-width: 700px){
     .reach{
-        padding-top: 48px;
-        padding-right: 16px;
-        padding-bottom: 48px;
-        padding-left: 16px;
+        padding-top: var(--space-2xl);
+        padding-right: var(--space-md);
+        padding-bottom: var(--space-2xl);
+        padding-left: var(--space-md);
     }
+
     .row{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 48px;
+        gap: var(--space-2xl);
     }
 }
