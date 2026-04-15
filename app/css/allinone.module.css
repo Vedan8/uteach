@@ -187,8 +187,9 @@
 @media (min-width: 701px) and (max-width: 1320px) {
 
     .allinone{
-        padding: var(--space-2xl);
+        padding: var(--space-3xl);
         gap: var(--space-2xl);
+        justify-content: space-between;
     }
 
     .info{

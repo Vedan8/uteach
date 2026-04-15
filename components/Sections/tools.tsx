@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import styles from "@/app/css/tools.module.css";
-import Appframe from "@/components/updates/appframe"
+import Appframe from "@/components/updates/appframe";
 
 export default function Tools() {
   return (
