@@ -1,20 +1,22 @@
 .tools{
     width: 100%;
     height: fit-content;
-    padding: 80px;
+    padding: var(--space-3xl);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 80px;
-    background-color: #F1F5F9;
+    gap: var(--space-3xl);
+    background-color: var(--color-bg-light);
     position: relative;
 }
+
 .headingWrapper{
     position: relative;
     display: inline-block;
     width: fit-content;
     height: fit-content;
 }
+
 .underline{
     width: 121px;
     height: 13px;
@@ -22,36 +24,40 @@
     bottom: 3px;
     z-index: -1;
 }
+
 .info{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     height: fit-content;
-    gap: 32px;
+    gap: var(--space-xl);
 }
+
 .heading{
     width: 1280px;
     height: 62px;
     font-weight: 800;
-    font-size: 56px;
-    line-height: 110%;
+    font-size: var(--text-4xl);
+    line-height: var(--leading-tight);
     letter-spacing: 0%;
     text-align: center;
     z-index: 2;
     position: relative;
 }
+
 .paragraph{
     max-width: 900px;
     width: 100%;
     height: 77px;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 180%;
+    font-size: var(--text-lg);
+    line-height: var(--leading-loose);
     letter-spacing: 0%;
     text-align: center;
     z-index: 2;
 }
+
 .right_blob{
     width: 523px;
     height: 868.65px;
@@ -60,6 +66,7 @@
     right: 0;
     z-index: 1;
 }
+
 .left_blob{
     width: 561.28px;
     height: 652.22px;
@@ -68,57 +75,66 @@
     top: 250px;
     z-index: 1;
 }
+
 .desktop{
     width: 1120px;
     height: 660px;
     z-index: 2;
 }
+
 .lines{
     width: 1093px;
     height: 78px;
     position: absolute;
     bottom: 170px;
 }
+
 @media (max-width: 700px){
     .tools{
-        padding-left: 16px;
-        padding-right: 16px;
-        padding-top: 48px;
-        padding-bottom: 48px;
-        gap: 32px;
+        padding-left: var(--space-md);
+        padding-right: var(--space-md);
+        padding-top: var(--space-2xl);
+        padding-bottom: var(--space-2xl);
+        gap: var(--space-xl);
         overflow-x: hidden;
     }
+
     .info{
-        gap: 24px;
+        gap: var(--space-lg);
     }
+
     .heading{
         max-width: 362px;
         width: 100%;
         height: 26px;
         font-weight: 700;
-        font-size: 24px;
-        line-height: 110%;
+        font-size: var(--text-xl);
+        line-height: var(--leading-tight);
         letter-spacing: 0%;
         text-align: left;
         z-index: 2;
     }
+
     .paragraph{
         max-width: 362px;
         width: 100%;
         font-weight: 400;
-        font-size: 16px;
-        line-height: 140%;
+        font-size: var(--text-sm);
+        line-height: var(--leading-normal);
         letter-spacing: 0%;
         text-align: left;
         z-index: 2;
     }
+
     .desktop{
         height: 226px;
         width: 361px;
     }
+
     .lines{
         display: none;
     }
+
     .underline{
         width: 58px;
         height: 9px;
@@ -126,12 +142,14 @@
         left: 0;
         transform: none;
     }
+
     .left_blob{
         width: 157.84px;
         height: 206px;
         left: -40px;
         top: 187px;
     }
+
     .right_blob{
         width: 223.37px;
         height: 371px;

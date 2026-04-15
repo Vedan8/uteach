@@ -1,34 +1,38 @@
 .student{
     width: 100%;
     height: fit-content;
-    padding: 80px;
+    padding: var(--space-3xl);
     display: flex;
-    gap: 80px;
+    gap: var(--space-3xl);
     align-items: center;
     justify-content: center;
 }
+
 .student_images{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: var(--space-md);
 }
+
 .col1{ 
     width: 172px; 
     height: 546px; 
-    padding-top: 80px; 
+    padding-top: var(--space-3xl); 
 }
+
 .col2{ 
     width: 128px; 
     height: 651px; 
-    padding-top: 
-    32px; 
+    padding-top: var(--space-xl); 
 }
+
 .col3{ 
     width: 128px; 
     height: 567px; 
 }
+
 .col4{ 
     width: 160px; 
     height: 436px; 
@@ -47,75 +51,88 @@
     right: 0;
 }
 
-.info{ width: 100%; position: relative; }
+.info{ 
+    width: 100%; 
+    position: relative; 
+}
 
 .data{
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: var(--space-xl);
 }
 
 .heading{
     width: 600px;
     height: 124px;
-    font-size: 56px;
+    font-size: var(--text-4xl);
     font-weight: 800;
-    line-height: 110%;
+    line-height: var(--leading-tight);
 }
 
 .paragraph{
     width: 620px;
     height: 144px;
-    font-size: 20px;
-    line-height: 180%;
+    font-size: var(--text-lg);
+    line-height: var(--leading-loose);
 }
 
 .button{
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-md);
     display: flex;
 }
 
 .button_text{
     width: 300px;
-    font-size: 20px;
-    color: #2563EB;
+    font-size: var(--text-lg);
+    color: var(--color-primary);
 }
 
-.arrow{ height: 24px; width: 24px; }
+.arrow{ 
+    height: 24px; 
+    width: 24px; 
+}
 
 @media (max-width: 700px) {
     .student{
-        padding: 48px 16px;
+        padding: var(--space-2xl) var(--space-md);
         flex-direction: column-reverse;
-        gap: 32px;
+        gap: var(--space-xl);
     }
+
     .data{ 
-        gap: 24px; 
+        gap: var(--space-lg); 
     }
+
     .heading{
         max-width: 361px;
         width: 100%;
-        font-size: 24px;
+        font-size: var(--text-xl);
     }
+
     .paragraph{
         max-width: 361px;
         width: 100%;
-        font-size: 16px;
+        font-size: var(--text-sm);
     }
+
     .col1{ 
         width: 94px; 
         height: 281px; 
-        padding-top: 48px; 
+        padding-top: var(--space-2xl); 
     }
+
     .col2{ 
         width: 72px; 
         height: 309px; 
     }
+
     .col3{ 
         width: 72px; 
         height: 283px; 
     }
+
     .col4{ 
         width: 88px; 
         height: 218px; 
@@ -131,29 +148,32 @@
 
 @media (min-width: 701px) and (max-width: 1340px) {
     .student{
-        padding: 48px;
-        gap: 48px;
+        padding: var(--space-2xl);
+        gap: var(--space-2xl);
     }
 
     .student_images{
-        gap: 12px;
+        gap: var(--space-sm);
         justify-content: flex-start;
-        padding-left: 80px;
+        padding-left: var(--space-3xl);
     }
 
     .col1{ 
         width: 94px; 
         height: 281px; 
-        padding-top: 48px; 
+        padding-top: var(--space-2xl); 
     }
+
     .col2{ 
         width: 72px; 
         height: 309px; 
     }
+
     .col3{ 
         width: 72px; 
         height: 283px; 
     }
+
     .col4{ 
         width: 88px; 
         height: 218px; 
@@ -164,7 +184,7 @@
     }
 
     .data{
-        gap: 24px;
+        gap: var(--space-lg);
     }
 
     .heading{
@@ -177,13 +197,13 @@
     .paragraph{
         width: 100%;
         height: auto;
-        font-size: 16px;
+        font-size: var(--text-sm);
         line-height: 150%;
     }
 
     .button_text{
         width: auto;
-        font-size: 16px;
+        font-size: var(--text-sm);
     }
 
     .aeroplane{
